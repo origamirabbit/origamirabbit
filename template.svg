@@ -299,9 +299,9 @@
 
   <!-- Work ... -->
   <g transform="translate(10, 120)" class="msg-3">
-    <rect width="490" height="66.1302" rx="18.0355" class="bubble" />
+    <rect width="460" height="66.1302" rx="18.0355" class="bubble" />
     <text x="15" y="27">I’m a software engineer. I used to study in Australia,</text>
-    <text x="15" y="50">now I’ve been at ThoughtWorks for {psTime} now.</text>
+    <text x="15" y="50">now I’ve been at ThoughtWorks for {twTime} now.</text>
   </g>
 
   <!-- typing 4 -->
@@ -323,9 +323,9 @@
 
   <!-- Twitter -->
   <g transform="translate(10, 192)" class="msg-4">
-    <rect width="480" height="42" rx="18.0355" class="bubble" />
+    <rect width="475" height="42" rx="18.0355" class="bubble" />
     <text x="15" y="27">
-      You can find me on Linkedin at
+      You can find me on LinkedIn at
       <a xlink:href="https://www.linkedin.com/in/yifu-liu-281828118/">/in/yifu-liu-281828118/</a>
     </text>
   </g>

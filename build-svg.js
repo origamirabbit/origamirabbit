@@ -38,7 +38,7 @@ const emojis = {
   32: '💨',
 }
 
-// Cheap, janky way to have variable bubble width
+// Cheap way to have variable bubble width
 dayBubbleWidths = {
   Monday: 235,
   Tuesday: 235,
@@ -49,13 +49,14 @@ dayBubbleWidths = {
   Sunday: 230,
 }
 
-// Time working at PlanetScale
+// Time working at TW
 const today = new Date()
 const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(
   today
 )
 
-const psTime = formatDistance(new Date(2022, 2, 11), today, {
+// Start date: 2022/2/11
+const twTime = formatDistance(new Date(2022, 1, 11), today, {
   addSuffix: false,
 })
 
@@ -80,7 +81,7 @@ got(url, { prefixUrl: WEATHER_DOMAIN })
       data = data.replace('{degF}', degF)
       data = data.replace('{degC}', degC)
       data = data.replace('{weatherEmoji}', emojis[icon])
-      data = data.replace('{psTime}', psTime)
+      data = data.replace('{twTime}', twTime)
       data = data.replace('{todayDay}', todayDay)
       data = data.replace('{dayBubbleWidth}', dayBubbleWidths[todayDay])
 
