@@ -274,7 +274,7 @@
 
   <!-- From Columbus... -->
   <g transform="translate(10, 48)" class="msg-2">
-    <rect width="439" height="66.1302" rx="18.0355" class="bubble" />
+    <rect width="415" height="66.1302" rx="18.0355" class="bubble" />
     <text x="15" y="27">I live in Jílín City, Jílín where it’s supposed to be</text>
     <text x="15" y="50">{degC}° C ({degF}° F) and <tspan class="emoji">{weatherEmoji}</tspan> today.</text>
   </g>
@@ -299,7 +299,7 @@
 
   <!-- Work ... -->
   <g transform="translate(10, 120)" class="msg-3">
-    <rect width="439" height="66.1302" rx="18.0355" class="bubble" />
+    <rect width="490" height="66.1302" rx="18.0355" class="bubble" />
     <text x="15" y="27">I’m a software engineer. I used to study in Australia,</text>
     <text x="15" y="50">now I’ve been at ThoughtWorks for {psTime} now.</text>
   </g>
@@ -319,15 +319,14 @@
     <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
       <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
     </circle>
-
   </g>
 
   <!-- Twitter -->
   <g transform="translate(10, 192)" class="msg-4">
-    <rect width="513" height="42" rx="18.0355" class="bubble" />
+    <rect width="480" height="42" rx="18.0355" class="bubble" />
     <text x="15" y="27">
       You can find me on Linkedin at
-      <a xlink:href="https://www.linkedin.com/in/yifu-liu-281828118/">https://www.linkedin.com/in/yifu-liu-281828118/</a>
+      <a xlink:href="https://www.linkedin.com/in/yifu-liu-281828118/">/in/yifu-liu-281828118/</a>
     </text>
   </g>
 
