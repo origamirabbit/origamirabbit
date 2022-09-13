@@ -248,7 +248,7 @@
 
   </g>
 
-  <!-- Hi, I'm Jason -->
+  <!-- Hi -->
   <g transform="translate(10, 0)" class="msg-1 bubble">
     <rect width="133" height="42" rx="18.0355" />
     <text x="15" y="27">Hi, I'm River</text>
@@ -272,7 +272,7 @@
 
   </g>
 
-  <!-- From Columbus... -->
+  <!-- From ... -->
   <g transform="translate(10, 48)" class="msg-2">
     <rect width="415" height="66.1302" rx="18.0355" class="bubble" />
     <text x="15" y="27">I live in Jílín City, Jílín where it’s supposed to be</text>
@@ -321,7 +321,7 @@
     </circle>
   </g>
 
-  <!-- Twitter -->
+  <!-- LinkedIn -->
   <g transform="translate(10, 192)" class="msg-4">
     <rect width="475" height="42" rx="18.0355" class="bubble" />
     <text x="15" y="27">
