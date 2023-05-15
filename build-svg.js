@@ -35,18 +35,18 @@ const emojis = {
   29: '🌧',
   30: '🥵',
   31: '🥶',
-  32: '💨',
+  32: '💨'
 }
 
 // Cheap way to have variable bubble width
-dayBubbleWidths = {
+const dayBubbleWidths = {
   Monday: 235,
   Tuesday: 235,
   Wednesday: 260,
   Thursday: 245,
   Friday: 220,
   Saturday: 245,
-  Sunday: 230,
+  Sunday: 230
 }
 
 // Time working at TW
@@ -57,7 +57,7 @@ const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(
 
 // Start date: 2022/2/11
 const twTime = formatDistance(new Date(2022, 1, 11), today, {
-  addSuffix: false,
+  addSuffix: false
 })
 
 // Today's weather
@@ -66,33 +66,33 @@ let url = `forecasts/v1/daily/1day/${locationKey}?apikey=${WEATHER_API_KEY}`
 
 got(url, { prefixUrl: WEATHER_DOMAIN })
   .then((response) => {
-    console.log(response.body)
-    let json = JSON.parse(response.body)
+      console.log(response.body)
+      let json = JSON.parse(response.body)
 
-    const degF = Math.round(json.DailyForecasts[0].Temperature.Maximum.Value)
-    const degC = Math.round(qty(`${degF} tempF`).to('tempC').scalar)
-    const icon = json.DailyForecasts[0].Day.Icon
+      const degF = Math.round(json.DailyForecasts[0].Temperature.Maximum.Value)
+      const degC = Math.round(qty(`${degF} tempF`).to('tempC').scalar)
+      const icon = json.DailyForecasts[0].Day.Icon
 
-    fs.readFile('template.svg', 'utf-8', (error, data) => {
-      if (error) {
-        return
-      }
-
-      data = data.replace('{degF}', degF)
-      data = data.replace('{degC}', degC)
-      data = data.replace('{weatherEmoji}', emojis[icon])
-      data = data.replace('{twTime}', twTime)
-      data = data.replace('{todayDay}', todayDay)
-      data = data.replace('{dayBubbleWidth}', dayBubbleWidths[todayDay])
-
-      data = fs.writeFile('chat.svg', data, (err) => {
-        if (err) {
-          console.error(err)
+      fs.readFile('template.svg', 'utf-8', (error, data) => {
+        if (error) {
           return
         }
+
+        data = data.replace('{degF}', degF)
+        data = data.replace('{degC}', degC)
+        data = data.replace('{weatherEmoji}', emojis[icon])
+        data = data.replace('{twTime}', twTime)
+        data = data.replace('{todayDay}', todayDay)
+        data = data.replace('{dayBubbleWidth}', dayBubbleWidths[todayDay])
+
+        fs.writeFile('chat.svg', data, (err) => {
+          if (err) {
+            console.error(err)
+          }
+        })
       })
-    })
-  })
+    }
+  )
   .catch((err) => {
     // TODO: something better
     console.log(err)
