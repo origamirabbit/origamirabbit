@@ -8,11 +8,8 @@ on:
 
 jobs:
   qodana:
+    needs: build
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      checks: write
     steps:
       - uses: actions/checkout@v3
         with:
